@@ -1,0 +1,211 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        /* Main Container - Flexbox */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+
+            display: flex;
+            gap: 25px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* Cards */
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+            flex: 1 1 300px;
+            text-align: center;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Media Query for Tablets */
+        @media (max-width: 768px) {
+
+            nav {
+                gap: 15px;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+
+        /* Media Query for Mobile */
+        @media (max-width: 480px) {
+
+            header {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .container {
+                padding: 10px;
+                margin: 15px auto;
+            }
+
+            .card {
+                width: 100%;
+                padding: 20px;
+            }
+
+            footer {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Responsive Webpage</h1>
+        <p>Designed using CSS3, Flexbox and Media Queries</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Skills</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main class="container">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>
+                HTML is used to create the structure
+                and content of webpages.
+            </p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>
+                CSS is used to style webpages and
+                create attractive layouts.
+            </p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>
+                JavaScript adds interaction and
+                dynamic functionality to webpages.
+            </p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Yoihenba Ngairangbam | Responsive Web Design</p>
+    </footer>
+
+</body>
+</html>

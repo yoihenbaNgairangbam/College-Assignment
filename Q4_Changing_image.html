@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Change Image Using JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        img {
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Image Changing Webpage</h1>
+
+    <img id="myImage"
+         src="https://picsum.photos/id/1015/400/250"
+         alt="Sample Image">
+
+    <br>
+
+    <button onclick="changeImage()">
+        Change Image
+    </button>
+
+
+    <script>
+
+        function changeImage() {
+
+            let image = document.getElementById("myImage");
+
+            if (image.src.includes("1015")) {
+                image.src = "https://picsum.photos/id/1025/400/250";
+            }
+            else {
+                image.src = "https://picsum.photos/id/1015/400/250";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
